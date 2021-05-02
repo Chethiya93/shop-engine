@@ -1,0 +1,31 @@
+.cls-select{
+    margin-top: 16px;
+    margin-left: 16px;
+}
+table {
+    width: 100%;
+}
+.cls-table{
+    padding: 16px;
+}
+
+.cls-select-drop{
+    width: 300px;
+}
+
+.table-header{
+    color: black;
+}
+
+.cls-table-header{
+    background-color: rgb(230, 230, 230);
+}
+
+.cls-table-row:hover{
+    background-color: rgb(219, 227, 236);
+}
+
+
+/* .bodybg-color {
+    background-color:grey;
+} */

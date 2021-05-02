@@ -1,0 +1,17 @@
+{
+    "status": "OK",
+    "data": [
+        {
+            "id": 1,
+            "name": "Penguine-Ears",
+            "cartonPrice": 175,
+            "description": "Penguine-Ears Description. Penguine-Ears Description. Penguine-Ears Description."
+        },
+        {
+            "id": 2,
+            "name": "Horsehoe",
+            "cartonPrice": 825,
+            "description": "Horsehoe Description. Horsehoe Description. Horsehoe Description. Horsehoe Description."
+        }
+    ]
+}

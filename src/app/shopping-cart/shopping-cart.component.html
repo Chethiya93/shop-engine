@@ -1,0 +1,51 @@
+<div>
+  <div class="cls-cart">
+    <mat-card class="cls-cart-layout">
+      <mat-card-header>
+        <mat-card-title class="cls-cart-title"><b>Shopping Cart</b></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+
+        <ul>
+          <li *ngFor="let item of cartDataList">
+            {{item.name}} - {{item.cartons}} carton, {{item.units}} unit
+            <br>
+            Rs: {{item.totalPrice.toFixed(2)}} 
+            <br>
+            <button class="btn-remove-cart btn" (click)="removeProductFromCart(item.productId)">Remove</button>
+        </ul>
+
+        <h3>Total: Rs.{{totalPrice.toFixed(2)}}</h3>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  <div class="content" *ngFor="let product of productList">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title><b>{{product.name}}</b></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{product.description}}</p>  
+        <h4><b>Rs: {{product.cartonPrice.toFixed(2)}}</b></h4>
+
+        <div class="cls-cart-input">
+          <div class="block">
+            <label class="lbl-card">Carton</label>
+            <span><input #cartoonInput type="number" class="input-box-layout" min="0" value="0" size="4" /></span>
+            <label class="lbl-card">Unit</label>
+            <span><input #unitInput type="number" class="input-box-layout" min="0" value="0" size="4" /></span>
+          </div>
+        </div> 
+      </mat-card-content>  
+      <mat-card-actions>
+        <div class="cls-btn-add-cart">
+          <button class="btn-add-cart btn" (click)="addToCart(product.id,cartoonInput.value, unitInput.value)">
+            Add to Cart
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>
